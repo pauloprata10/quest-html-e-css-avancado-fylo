@@ -1,0 +1,55 @@
+@media (max-width: 1200px) {
+  .container-footer {
+  column-gap: 100px;
+}
+
+.container-footer .item {
+  justify-self: flex-start;
+}
+
+.form-email form {
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.form-email .email {
+  width: 100%;
+}
+
+.form-email .btn {
+  width: 100%;
+  font-size: 1.2rem;
+}
+}
+
+
+@media (max-width: 800px) {
+  .team-produtividade {
+    grid-template-columns: 1fr;
+}
+
+  .testimonials {
+    grid-template-columns: 1fr;
+}
+
+  .footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .services {
+    grid-template-columns: 1fr;
+}
+}
+
+@media(max-width: 375px) {
+  .header .logo {
+      max-width: 100px;
+  }
+
+  .footer .logo{
+      text-align: initial;
+  }
+}
