@@ -32,11 +32,13 @@ h1, h2, h3, h4 {
 .header .nav {
   display: flex;
   justify-content: space-between;
+  text-decoration: none;
 }
 
 .nav .links:hover {
   color: var(--white);
   transition: all .3s ease;
+  text-decoration: underline;
 }
 
 .header .logo {
@@ -56,12 +58,11 @@ h1, h2, h3, h4 {
 }
 
 .btn:hover {
-  background-color: var(--cyan);
+  background-image: linear-gradient(hsl(176, 68%, 64%), hsl(176, 68%, 64%));
   cursor: pointer;
 }
 
 .main {
-  background-color: var(--dark-introemail);
   grid-area: main;
   display: flex;
   flex-direction: column;
@@ -74,26 +75,23 @@ h1, h2, h3, h4 {
 .painel {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
   padding-bottom: 150px;
-  background: url(/images/bg-curvy-desktop.svg) center bottom no-repeat var(--dark-introemail);
-  background-size: contain;
-}
-
-.painel img {
   z-index: 4;
-  margin-bottom: 1.5rem;
-}
-
-.painel {
-  z-index: 4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 30px;
   text-align: center;
   max-width: 100%;
+}
+
+.secao-com-texto {
+  background: url(/images/bg-curvy-desktop.svg) center bottom no-repeat var(--dark-introemail);
+  background-size: contain;
+  width: 100%;
+}
+
+.ilustracao img{
+  display: flex;
+  width: 100%;
 }
 
 .painel .texto {
@@ -109,7 +107,6 @@ h1, h2, h3, h4 {
 }
 
 .services {
-  background-color: var(--dark);
   z-index: 4;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -175,6 +172,17 @@ h1, h2, h3, h4 {
 .link a {
   color: var(--blue);
   transition: all .3s ease-in-out;
+}
+
+.link a::after { 
+  content: '';
+  background: url(../../images/icon-arrow.svg) no-repeat center center;
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 60px;
+  top: 25px;
+  margin-left: 7px;
 }
 
 .link:hover  {
